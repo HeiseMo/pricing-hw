@@ -1,0 +1,235 @@
+@import url("http://fonts.cdnfonts.com/css/gilroy-bold");
+body {
+  margin: 0;
+  font-family: "Gilroy-Bold";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+}
+
+.base-plans {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.base-plans-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 203px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 45px;
+}
+.base-plans-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50vh;
+  width: 80vw;
+}
+.base-plans-body-selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 130px;
+  font-family: "Gilroy-Bold";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #1f2643;
+}
+
+.slash {
+  color: #eef0f6;
+  font-size: 20px;
+}
+
+.base-plans-body-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.card:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 389px;
+  height: 600px;
+  background: #ffffff;
+  box-shadow: 0px 43px 60px rgba(0, 0, 0, 0.08);
+  border: 5px hidden #95bcf2;
+  border-radius: 5px;
+}
+
+.card:first-child:hover {
+  border: 5px solid #95bcf2;
+  transition: border 300ms;
+}
+
+.card:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 389px;
+  height: 700px;
+  background: #ffffff;
+  box-shadow: 0px 43px 60px rgba(0, 0, 0, 0.08);
+  border: 5px hidden #95bcf2;
+  border-radius: 5px;
+}
+
+.card:nth-child(2):hover {
+  border: 5px solid #95bcf2;
+  transition: border 300ms;
+}
+
+.card:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 389px;
+  height: 800px;
+  background: #ffffff;
+  box-shadow: 0px 43px 60px rgba(0, 0, 0, 0.08);
+  border: 5px hidden #95bcf2;
+  border-radius: 5px;
+}
+
+.card:nth-child(3):hover {
+  border: 5px solid #95bcf2;
+  transition: border 300ms;
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 336px;
+  text-align: left;
+}
+
+.card-top-title {
+  height: 60px;
+  width: 280px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card-top-title > span {
+  font-family: "Gilroy-Bold";
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 45px;
+  padding-top: 20px;
+  padding-left: 20px;
+  color: #1f2643;
+}
+
+.card-top-description {
+  display: flex;
+  justify-content: flex-start;
+  height: 180px;
+  width: 336px;
+}
+
+.card-top-description > span {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  font-family: "Gilroy-Medium";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 28px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+/* Rectangle */
+
+.rectangle {
+  display: inline-block;
+  width: 6px;
+  height: 48px;
+  background-color: #f2f3f8;
+  border-radius: 100px;
+  transform: rotate(20deg);
+}
+
+.card-top-pricing {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  width: 250px;
+}
+
+.card-top-pricing > span:first-child {
+  font-family: "Gilroy-Medium";
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 54px;
+}
+.card-top-pricing-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card-top-pricing-info > span {
+  font-family: "Gilroy-Medium";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #7a7e92;
+}
+
+hr{
+  display: block;
+  height: 1px;
+  width: 80%;
+  border: 0;
+  border-top: 1px solid rgba(207, 209, 227, 0.75);;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.card-bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100%
+}
+
+.card-bottom-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.card-bottom-list-items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
