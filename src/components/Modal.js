@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { ReactComponent as Tick } from "../tick.svg";
 
 class Modal extends Component {
   constructor(props) {
@@ -9,8 +9,42 @@ class Modal extends Component {
   render() {
     return (
       <div className="menu-item">
-dsfsdfsfds
-    </div>
+        <div className="menu-item-title">
+          <span>Core HR</span>
+        </div>
+        <div className="menu-item-description">
+          Minimize HR headaches so you can get back to business
+        </div>
+        <div className="menu-item-list">
+          <div className="menu-item-list-item">
+            <span className="items">
+              <Tick transform="scale(0.5)" fill="white" />
+            </span>
+            <span className="menu-item-list-text">Hiring & Onboarding</span>
+          </div>
+          <div className="menu-item-list-item">
+            <span className="items">
+              <Tick transform="scale(0.5)" fill="white" />
+            </span>
+            <span className="menu-item-list-text">Employee database</span>
+          </div>
+          <div className="menu-item-list-item">
+            <span className="items">
+              <Tick transform="scale(0.5)" fill="white" />
+            </span>
+            <span className="menu-item-list-text">Document management</span>
+          </div>
+          <div className="menu-item-list-item">
+            <span className="items">
+              <Tick transform="scale(0.5)" fill="white" />
+            </span>
+            <span className="menu-item-list-text">Reporting</span>
+          </div>
+        </div>
+        <div className="menu-item-footer">
+          <span>ALL FEATURES</span>
+        </div>
+      </div>
     );
   }
 }

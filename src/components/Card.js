@@ -5,7 +5,7 @@ import Modal from "./Modal"
 class Card extends Component {
   constructor(props) {
     super(props);
-    this.state = {open: false, option: ""};
+    this.state = {open: false, option: "", status: false};
   }
   setOpen = (x) => {
     if(this.state.open === false){
@@ -14,16 +14,25 @@ class Card extends Component {
         this.setState({open: false, option: ""});
     }
   }
+  setActive = () => {
+    if(this.state.status === false){
+        this.setState({status: true});
+    } else {
+        this.setState({status: false});
+    }
+  }
   render() {
     let plans = this.props.plans;
     return (
-      <div className="card hover">
+      <div className={this.state.status ? "card card-active" : "card hover"}>
         {plans.map((plan, index) => {
           if (plan.title === this.props.type) {
             return (
               <>
                 <div className="card-top">
                   <div className="card-top-title">
+                  {plan.title === "Essential" ? <div className="circle-one"></div> : "" }
+                  {plan.title === "Growth" ? <div className="circle-two"></div> : "" }
                     <span>{plan.title}</span>
                   </div>
                   <div className="card-top-description">
@@ -61,7 +70,7 @@ class Card extends Component {
                               src="https://cdn-icons-png.flaticon.com/24/18/18623.png"
                               alt=""
                             ></img>
-                            {this.state.open && this.state.option === "hr" && <Modal />}
+                            {this.state.open && this.state.option === "hr" && <Modal title={plan.title}/>}
                           </span>
                         ) : (
                           <span className="hidden"></span>
@@ -137,6 +146,7 @@ class Card extends Component {
                         )}
                       </div>
                     </div>
+                    {plan.title !== "Essential" ? <span className="plus">+</span> : "" }
                     <div className="higher-tier">
                     <div className="card-bottom-list-items">
                       <div className="card-bottom-list-items-group-one">
@@ -191,7 +201,7 @@ class Card extends Component {
                     </div>
                   </div>
                   </div>
-                  <div className="card-bottom-button">Select Plan</div>
+                  <div onClick={() => this.setActive()} className="card-bottom-button">Select Plan</div>
                 </div>
               </>
             );
